@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "codedecide"
-version = "0.1.1"
+version = "0.1.2"
 description = "Cryptocurrency trading utility"
 authors = ["compasty <compasty@gmail.com>"]
 readme = "README.md"

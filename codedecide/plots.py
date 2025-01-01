@@ -39,8 +39,14 @@ def plot_ohlcv(df, with_volume: bool = True, with_rangeslider: bool = True,
         fig.update_layout(title=real_title, height=height,
                           showlegend=show_legend)
     else:
+        subtitles = [real_title, 'Volume']
+        if has_indicator:
+            for indicator in indicators:
+                if indicator.separate:
+                    subtitles.append(indicator.trace_name)
+        print(subtitles)
         fig = make_subplots(rows=row_number, cols=1, shared_xaxes=True,
-                            subplot_titles=(real_title, "Volume"), vertical_spacing=0.3)
+                            subplot_titles=subtitles, vertical_spacing=0.05)
         fig.add_trace(
             go.Candlestick(
                 x=df.index, open=df['open'], high=df['high'], low=df['low'],
