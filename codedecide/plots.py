@@ -21,6 +21,7 @@ def plot_ohlcv(df, with_volume: bool = True, with_rangeslider: bool = True,
     real_title = "Price" if title is None else title
     row_number = calc_row_number(with_volume, indicators)
     has_indicator = indicators is not None and len(indicators) > 0
+    # set initial height
     height = 500
     if row_number == 1:
         fig = go.Figure(data=[go.Candlestick(x=df.index,

@@ -1,5 +1,6 @@
-# Codedecide: Utilities for quantitive analysis and crypto trading
+# Codedecide: Utilities for quantitative analysis and crypto trading
 
-## 要求
+## Requirements
 
-1. OHLCV文件或者dataframe须包含open, close, high, low, volume(optional), 列名应小写
+1. OHLCV Files or dataframes must contain `open`, `close`, `high`, `low`, `volume` columns, column names should be lower
+   case.
