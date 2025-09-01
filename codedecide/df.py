@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 
-
 def read_feather_file(file_path, top_n: int = -1, date_col: str = 'date'):
     """
     read ohlcv feather file
